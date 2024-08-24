@@ -1,0 +1,31 @@
+{
+  "name": "cypressproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "manoj",
+  "license": "ISC",
+  "dependencies": {
+    "@applitools/test-utils": "^1.5.17",
+    "fs-extra": "^11.2.0",
+    "util": "^0.12.5",
+    "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "cypress-if": "^1.12.0",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "cypress-terminal-report": "^5.2.0",
+    "cypress-xpath": "^2.0.1"
+  },
+  "compileroptions": {
+    "types": [
+      "@applitools/eyes-cypress",
+      "cypress",
+      "node"
+    ]
+  }
+}
