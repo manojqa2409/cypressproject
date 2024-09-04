@@ -1,5 +1,3 @@
-/// <reference types="Cypress" />
-
 describe('Program-Duplicate', () => {
 
   Cypress.on('uncaught:exception', (err, runnable) => {
