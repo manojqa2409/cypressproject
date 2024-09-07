@@ -53,7 +53,7 @@ module.exports = defineConfig({
   //videoFolder : "D:\cypressproject\cypress\videos",
   experimentalStudio: true,
   chromeWebSecurity: false,
-  baseUrl : 'http://localhost:8081/gui',
+  //baseUrl : 'http://localhost:8081/gui',
   viewportWidth: 1900,
   viewportHeight: 1200,
   clearCookiesBeforeAllTests: false,
@@ -62,6 +62,7 @@ module.exports = defineConfig({
   cacheAcrossSpecs: false,
   defaultCommandTimeout: 10000,
   pageLoadTimeout: 60000,
+  baseUrl : 'https://naveenautomationlabs.com/opencart/',
   
   
 },
