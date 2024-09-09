@@ -2,11 +2,7 @@
 
 describe('Role Based Login', () =>{
 
-    Cypress.on('uncaught:exception', (err, runnable) => {
-            return false; // Handle uncaught exception
-        })
-
-        beforeEach(() =>{
+    beforeEach(() =>{
                 //cy.viewport(1900, 1200)//Change screen size
             })
 

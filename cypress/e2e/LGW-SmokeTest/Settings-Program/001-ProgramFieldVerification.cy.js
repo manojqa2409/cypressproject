@@ -2,11 +2,7 @@
 
 describe('ProgramFieldValidation', () => {
 
-  Cypress.on('uncaught:exception', (err, runnable) => {
-      return false; // Handle uncaught exception
-  })
-
-  beforeEach(() =>{
+   beforeEach(() =>{
 
       cy.session('loginSession', () => {
           cy.login();

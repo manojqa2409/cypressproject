@@ -1,9 +1,5 @@
 describe('Program-Duplicate', () => {
 
-  Cypress.on('uncaught:exception', (err, runnable) => {
-    return false; // Handle uncaught exception
-})
-
 beforeEach(() =>{
   cy.session('loginSession', () => {
         cy.login();

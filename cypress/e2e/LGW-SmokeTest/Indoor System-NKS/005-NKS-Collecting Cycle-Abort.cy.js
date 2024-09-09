@@ -2,10 +2,6 @@
 
 describe('Collecting Cycle', () =>{
 
-    Cypress.on('uncaught:exception', (err, runnable) => {
-            return false; // Handle uncaught exception
-    })
-
     //let inletcount = 0
 
     beforeEach(() =>{

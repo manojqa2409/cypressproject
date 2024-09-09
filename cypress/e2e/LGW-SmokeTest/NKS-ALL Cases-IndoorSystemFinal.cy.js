@@ -2,10 +2,6 @@
 
 describe('LGW-QGUI-AT-NKS', () =>{
 
-    Cypress.on('uncaught:exception', (err, runnable) => {
-            return false; // Handle uncaught exception
-    })
-
     beforeEach(() =>{
 		cy.session('loginSession', () => {
 				cy.login();

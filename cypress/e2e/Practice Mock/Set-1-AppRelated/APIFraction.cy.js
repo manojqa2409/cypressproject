@@ -2,10 +2,6 @@
 
 describe('LGW- Quantum UI Automation Test', () =>{
 
-    Cypress.on('uncaught:exception', (err, runnable) => {
-            return false; // Handle uncaught exception
-    })
-
     beforeEach(() =>{
             cy.viewport(1900, 1000)//Change screen size
     })
@@ -29,7 +25,10 @@ describe('LGW- Quantum UI Automation Test', () =>{
                     .then((response) =>{
                         expect(response.status).to.eq(200)
                         //chai.assert('Rest')
-                        const fraction_name=response.body[0]
+                        const fraction_name=response.body;
+                        expect(body).to.have.property('id')
+                        expect(body).to.have.property('fractionname')
+                        expect(body).to.have.property('visible')
                         //const fraction_id=response.body[0].id
                         return fraction_name
                         console.log(response.body)

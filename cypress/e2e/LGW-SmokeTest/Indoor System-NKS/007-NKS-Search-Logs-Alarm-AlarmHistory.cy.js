@@ -2,8 +2,6 @@
 
 describe('SearchFeature', () => {
 
-
-
   it('TC-01-Search-Logs-Alarm-AlarmHistory', function() {
 
     cy.visit('http://localhost:8081/gui/');

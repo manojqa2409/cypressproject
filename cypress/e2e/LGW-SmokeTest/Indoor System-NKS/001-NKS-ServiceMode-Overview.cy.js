@@ -2,10 +2,6 @@
 
 describe('Overview-ControlView-ServiceMode', () =>{
 
-    Cypress.on('uncaught:exception', (err, runnable) => {
-            return false; // Handle uncaught exception
-    })
-
     beforeEach(() =>{
 
             cy.session('loginSession', () => {

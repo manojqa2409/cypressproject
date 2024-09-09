@@ -2,10 +2,6 @@
 
 describe('Program', () => {
 
-  Cypress.on('uncaught:exception', (err, runnable) => {
-    return false; // Handle uncaught exception
-  })
-
   beforeEach(() =>{
 
     cy.session('loginSession', () => {

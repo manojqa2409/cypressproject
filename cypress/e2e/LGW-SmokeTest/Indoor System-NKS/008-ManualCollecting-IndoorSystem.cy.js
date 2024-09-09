@@ -2,10 +2,6 @@
 
 describe('ManualCollectingIndoor', () =>{
 
-    Cypress.on('uncaught:exception', (err, runnable) => {
-                return false; // Handle uncaught exception
-    })
-
     it('CompactorContainer-FanRun', () => {
 
         cy.visit('http://localhost:8081/gui') //visit URL
