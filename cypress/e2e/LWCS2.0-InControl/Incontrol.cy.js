@@ -1,25 +1,25 @@
 ///<reference types="cypress"/>
 
 describe('LWCS2.0', () => {
-  
+
   it('Incontrol-FanGroup', () => {
 
     // Visti Incontrol URL
     cy.visit('http://localhost:9000/gui');
     cy.wait(5000)
-    
+
     //Header-> Overview-> click  
     cy.get('[data-testid="overview"] > p').click().invoke('text').should('eq', 'Overview');
     cy.wait(5000)
-    
+
     //Header-> Overview-> Fan Group-> Click
     cy.get('[data-testid="fanGroup"]').click().invoke('text').should('eq', 'Fan Group');
     cy.wait(5000)
-    
+
     //Header-> Overview-> Fan Group-> M/S button-> Click
     cy.get('[data-testid="ms"] > .bp5-button-text').click().invoke('text').should('eq', 'm/s');
     cy.wait(5000)
-    
+
     //Header-> Overview-> Fan Group-> Hz button-> Click
     cy.get('[data-testid="hz"] > .bp5-button-text').click().invoke('text').should('eq', 'Hz');
     cy.wait(5000)
@@ -55,7 +55,7 @@ describe('LWCS2.0', () => {
     //Header-> Overview-> Fan Group-> Precon button-> Click on second Value (frequency)
     cy.get('[data-testid="precon-value-1"]').click().invoke('text').as('preconFrequencyValue');
     cy.wait(5000)
-    
+
     //Header-> Overview-> Fan Group-> Precon button-> Click
     cy.get('[data-testid="precon" ]> .bp5-button-text').click().invoke('text').should('eq', 'Precon');
     cy.wait(5000)
@@ -67,7 +67,7 @@ describe('LWCS2.0', () => {
     //Header-> Overview-> Fan Group-> Precon button-> Click on second Value (frequency)
     cy.get('[data-testid="precon-value-input-1"]').click().invoke('text').as('preconFrequencyValue1');
     cy.wait(5000)
-    
+
     //Header-> Overview-> Fan Group-> Precon button-> Click
     cy.get('[data-testid="precon" ]> .bp5-button-text').click();
     cy.wait(5000)
@@ -79,7 +79,7 @@ describe('LWCS2.0', () => {
     //Header-> Overview-> Fan Group-> Tab1
     cy.get('[data-testid="tab2"]').click()
     cy.wait(5000)
-    
+
 
   })
 })

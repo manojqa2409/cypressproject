@@ -1,29 +1,29 @@
 ///<reference types="cypress"/>
 
-describe('Session Extend', () =>{
+describe('Session Extend', () => {
 
-   beforeEach(() =>{
+	beforeEach(() => {
 		cy.session('loginSession', () => {
 			cy.login();
 			cy.wait(5000)
 		})
 	})
-	
-	it('TC-001-> English Language-> Expand Accordians(Container-FanGroup- Global Toggle) -> Inlets & Bottom Part-> Session Extend', () =>{
 
-        	cy.visit('/');
-			cy.wait(3000)
+	it('TC-001-> English Language-> Expand Accordians(Container-FanGroup- Global Toggle) -> Inlets & Bottom Part-> Session Extend', () => {
 
-			cy.expandAccordionsGlobalToggleFlag();
-						
-			cy.extendSessionTime()
-			cy.wait(1000)
+		cy.visit('/');
+		cy.wait(3000)
 
-			/*Validate the toster and their message which describe about the Current Session extend details*/
-			cy.get('.lw-toasts__toast').should('be.visible')
+		cy.expandAccordionsGlobalToggleFlag();
+
+		cy.extendSessionTime()
+		cy.wait(1000)
+
+		/*Validate the toster and their message which describe about the Current Session extend details*/
+		cy.get('.lw-toasts__toast').should('be.visible')
 			.and('contain.text', 'Session Extended')
 			.and('contain.text', 'The current session gets extended by 60 minutes.')
-			cy.wait(5000)
+		cy.wait(5000)
 
-        })
+	})
 })

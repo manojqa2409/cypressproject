@@ -1,15 +1,15 @@
 describe('Lillby-Service Mode', () => {
 
-    beforeEach(() =>{
+  beforeEach(() => {
 
     cy.session('loginSession', () => {
       cy.login();
       cy.wait(5000)
     })
-})
+  })
   /* ==== Start ===> Lillby-> ServiceMode-> Overview-> AIV-SV-> Valve-> Open-Close ==== */
-  it('Lillby-SM-Overview-Inlet-BV-SV-AIV-BackToNormalFromSM', {scrollBehavior: false},function() {
-    
+  it('Lillby-SM-Overview-Inlet-BV-SV-AIV-BackToNormalFromSM', { scrollBehavior: false }, function () {
+
     cy.visit('/');
     cy.wait(3000)
 
@@ -32,13 +32,13 @@ describe('Lillby-Service Mode', () => {
     cy.get(':nth-child(1) > [style="display: flex; padding-right: 4px;"] > .lw-toggle > div > .switch > .slider').click();
     cy.wait(3000)
     /*Bottom Valve - Check the Valve Open via Slider*/
-    cy.get(':nth-child(1) > [style="display: flex; padding-right: 4px;"] > .lw-toggle > div > .switch > input').check({force: true});
+    cy.get(':nth-child(1) > [style="display: flex; padding-right: 4px;"] > .lw-toggle > div > .switch > input').check({ force: true });
     cy.wait(3000)
     /*Bottom Valve - Click on slider to Close the Valve */
     cy.get(':nth-child(1) > [style="display: flex; padding-right: 4px;"] > .lw-toggle > div > .switch > .slider').click();
     cy.wait(3000)
     /*Bottom Valve - Check the Valve, It's Closed */
-    cy.get(':nth-child(1) > [style="display: flex; padding-right: 4px;"] > .lw-toggle > div > .switch > input').uncheck({force: true});
+    cy.get(':nth-child(1) > [style="display: flex; padding-right: 4px;"] > .lw-toggle > div > .switch > input').uncheck({ force: true });
     cy.wait(3000)
     /*Bottom Part - Move back to Normal State from Service Mode*/
     cy.get(':nth-child(2) > .control-view-main > :nth-child(1) > [style="display: flex; flex: 1 1 0%; align-items: center;"] > .lw-switch > .lw-switch__label > img').click();
@@ -53,13 +53,13 @@ describe('Lillby-Service Mode', () => {
     cy.get('[style="display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding-left: 0px;"] > [style="display: flex; padding-right: 4px;"] > .lw-toggle > div > .switch > .slider').click();
     cy.wait(3000)
     /*Section Valve Valve Close - Click on Slider to Close the Valve*/
-    cy.get('[style="display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding-left: 0px;"] > [style="display: flex; padding-right: 4px;"] > .lw-toggle > div > .switch > input').uncheck({force: true});
+    cy.get('[style="display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding-left: 0px;"] > [style="display: flex; padding-right: 4px;"] > .lw-toggle > div > .switch > input').uncheck({ force: true });
     cy.wait(3000)
     /*Section Valve Valve Close Check- Click on Slider to Close the Valve*/
     cy.get('[style="display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding-left: 0px;"] > [style="display: flex; padding-right: 4px;"] > .lw-toggle > div > .switch > .slider').click();
     cy.wait(3000)
     /**/
-    cy.get('[style="display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding-left: 0px;"] > [style="display: flex; padding-right: 4px;"] > .lw-toggle > div > .switch > input').check({force: true});
+    cy.get('[style="display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding-left: 0px;"] > [style="display: flex; padding-right: 4px;"] > .lw-toggle > div > .switch > input').check({ force: true });
     cy.wait(3000)
     /*Section Valve Move Back to Normal from Service Mode*/
     cy.get(':nth-child(2) > :nth-child(2) > .control-view-main__sidebar > .control-view-main > :nth-child(1) > [style="display: flex; flex: 1 1 0%; align-items: center;"] > .lw-switch > .lw-switch__label > img').click();
@@ -71,13 +71,13 @@ describe('Lillby-Service Mode', () => {
     cy.get('[style="display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding-left: 5px;"] > [style="display: flex; padding-right: 4px;"] > .lw-toggle > div > .switch > .slider').click();
     cy.wait(3000)
     /*AIV Valve Open - Check Open on Toggle*/
-    cy.get('[style="display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding-left: 5px;"] > [style="display: flex; padding-right: 4px;"] > .lw-toggle > div > .switch > input').check({force: true});
+    cy.get('[style="display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding-left: 5px;"] > [style="display: flex; padding-right: 4px;"] > .lw-toggle > div > .switch > input').check({ force: true });
     cy.wait(3000)
     /*AIV Valve Open - Check Open on Toggle*/
     cy.get('[style="display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding-left: 5px;"] > [style="display: flex; padding-right: 4px;"] > .lw-toggle > div > .switch > .slider').click();
     cy.wait(3000)
     /*AIV Valve Close - Close via clicking on Toggle*/
-    cy.get('[style="display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding-left: 5px;"] > [style="display: flex; padding-right: 4px;"] > .lw-toggle > div > .switch > input').uncheck({force: true});
+    cy.get('[style="display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding-left: 5px;"] > [style="display: flex; padding-right: 4px;"] > .lw-toggle > div > .switch > input').uncheck({ force: true });
     cy.wait(3000)
     /*AIV move to Normal from Service Mode*/
     cy.get(':nth-child(3) > :nth-child(2) > .control-view-main__sidebar > .control-view-main > :nth-child(1) > [style="display: flex; flex: 1 1 0%; align-items: center;"] > .lw-switch > .lw-switch__label > img').click();
@@ -88,12 +88,12 @@ describe('Lillby-Service Mode', () => {
     /*Logout - from application - Login Screen Should be there.*/
     //cy.get('.lw-header__logout > img').click();
     //cy.wait(3000)
- 
+
   })
 
   /* ==== Start ===> Lillby-> ServiceMode-> ResolveBlockage-> AIV-SV-> Valve-> Open-Close ==== */
-  it('Lillby-> ServiceMode-> ResolveBlockage-> AIV-SV-> Valve-> Open-Close', {scrollBehavior: false},function () {
-    
+  it('Lillby-> ServiceMode-> ResolveBlockage-> AIV-SV-> Valve-> Open-Close', { scrollBehavior: false }, function () {
+
     cy.visit('/');
     cy.wait(5000)
 
@@ -282,8 +282,8 @@ describe('Lillby-Service Mode', () => {
 
   /* ==== Start ==> All Container & PDV in Service Mode - Valve Open/Close ==== */
 
-  it('All Container & PDV in Service Mode - Valve Open/Close',{scrollBehavior: false}, function() {
-    
+  it('All Container & PDV in Service Mode - Valve Open/Close', { scrollBehavior: false }, function () {
+
     cy.visit('/');
     cy.wait(5000)
     cy.get('#accordion__heading-container').click();
@@ -295,13 +295,13 @@ describe('Lillby-Service Mode', () => {
     cy.get(':nth-child(3) > .container__item > .container__inner > .container__lower > .container__lets > :nth-child(1) > .container__lower-airflow__pipe > [style="z-index: 3;"] > [style="margin-top: 55px; visibility: visible;"] > .lw-toggle > div > .switch > .slider').click();
     cy.wait(3000)
     // Container(Papir-CC3) - Material Valve - click to Open
-    cy.get(':nth-child(3) > .container__item > .container__inner > .container__lower > .container__lets > :nth-child(1) > .container__lower-airflow__pipe > [style="z-index: 3;"] > [style="margin-top: 55px; visibility: visible;"] > .lw-toggle > div > .switch > input').check({force: true});
+    cy.get(':nth-child(3) > .container__item > .container__inner > .container__lower > .container__lets > :nth-child(1) > .container__lower-airflow__pipe > [style="z-index: 3;"] > [style="margin-top: 55px; visibility: visible;"] > .lw-toggle > div > .switch > input').check({ force: true });
     cy.wait(3000)
     // Container(Papir-CC3) - Air Valve - Open
     cy.get(':nth-child(3) > .container__item > .container__inner > .container__lower > .container__lets > :nth-child(1) > [style="display: flex; position: relative; margin-top: -71px;"] > :nth-child(2) > .container__lower-airflowTowardsFan__pipe > [style="margin-top: 23px; visibility: visible;"] > .lw-toggle > div > .switch > .slider').click();
     cy.wait(3000)
     // Container(Papir-CC3) - Air Valve - click to Open
-    cy.get(':nth-child(3) > .container__item > .container__inner > .container__lower > .container__lets > :nth-child(1) > [style="display: flex; position: relative; margin-top: -71px;"] > :nth-child(2) > .container__lower-airflowTowardsFan__pipe > [style="margin-top: 23px; visibility: visible;"] > .lw-toggle > div > .switch > input').check({force: true});
+    cy.get(':nth-child(3) > .container__item > .container__inner > .container__lower > .container__lets > :nth-child(1) > [style="display: flex; position: relative; margin-top: -71px;"] > :nth-child(2) > .container__lower-airflowTowardsFan__pipe > [style="margin-top: 23px; visibility: visible;"] > .lw-toggle > div > .switch > input').check({ force: true });
     cy.wait(3000)
     // Container(Rest2-CC2) - ServiceMode Icon - Click
     cy.get(':nth-child(2) > .container__item > [style="display: flex; position: relative; border-bottom: 3px solid transparent; max-width: 64px;"] > .lw-switch > .lw-switch__label > img').click();
@@ -310,13 +310,13 @@ describe('Lillby-Service Mode', () => {
     cy.get(':nth-child(2) > .container__item > .container__inner > .container__lower > .container__lets > :nth-child(1) > .container__lower-airflow__pipe > [style="z-index: 3;"] > [style="margin-top: 55px; visibility: visible;"] > .lw-toggle > div > .switch > .slider').click();
     cy.wait(3000)
     // Container(Rest2-CC2) - Material Valve - click to Open
-    cy.get(':nth-child(2) > .container__item > .container__inner > .container__lower > .container__lets > :nth-child(1) > .container__lower-airflow__pipe > [style="z-index: 3;"] > [style="margin-top: 55px; visibility: visible;"] > .lw-toggle > div > .switch > input').check({force: true});
+    cy.get(':nth-child(2) > .container__item > .container__inner > .container__lower > .container__lets > :nth-child(1) > .container__lower-airflow__pipe > [style="z-index: 3;"] > [style="margin-top: 55px; visibility: visible;"] > .lw-toggle > div > .switch > input').check({ force: true });
     cy.wait(3000)
     // Container(Rest2-CC2) - Air Valve - Open
     cy.get(':nth-child(2) > .container__item > .container__inner > .container__lower > .container__lets > :nth-child(1) > [style="display: flex; position: relative; margin-top: -71px;"] > :nth-child(2) > .container__lower-airflowTowardsFan__pipe > [style="margin-top: 23px; visibility: visible;"] > .lw-toggle > div > .switch > .slider').click();
     cy.wait(3000)
     // Container(Rest2-CC2) - Air Valve - click to Open
-    cy.get(':nth-child(2) > .container__item > .container__inner > .container__lower > .container__lets > :nth-child(1) > [style="display: flex; position: relative; margin-top: -71px;"] > :nth-child(2) > .container__lower-airflowTowardsFan__pipe > [style="margin-top: 23px; visibility: visible;"] > .lw-toggle > div > .switch > input').check({force: true});
+    cy.get(':nth-child(2) > .container__item > .container__inner > .container__lower > .container__lets > :nth-child(1) > [style="display: flex; position: relative; margin-top: -71px;"] > :nth-child(2) > .container__lower-airflowTowardsFan__pipe > [style="margin-top: 23px; visibility: visible;"] > .lw-toggle > div > .switch > input').check({ force: true });
     cy.wait(3000)
     // Container(Rest1-CC1) - ServiceMode Icon - Click
     cy.get(':nth-child(1) > .container__item > [style="display: flex; position: relative; border-bottom: 3px solid transparent; max-width: 64px;"] > .lw-switch > .lw-switch__label > img').click();
@@ -325,13 +325,13 @@ describe('Lillby-Service Mode', () => {
     cy.get(':nth-child(1) > .container__item > .container__inner > .container__lower > .container__lets > :nth-child(1) > .container__lower-airflow__pipe > [style="z-index: 3;"] > [style="margin-top: 55px; visibility: visible;"] > .lw-toggle > div > .switch > .slider').click();
     cy.wait(3000)
     // Container(Rest1-CC1) - Material Valve - click to Open
-    cy.get(':nth-child(1) > .container__item > .container__inner > .container__lower > .container__lets > :nth-child(1) > .container__lower-airflow__pipe > [style="z-index: 3;"] > [style="margin-top: 55px; visibility: visible;"] > .lw-toggle > div > .switch > input').check({force: true});
+    cy.get(':nth-child(1) > .container__item > .container__inner > .container__lower > .container__lets > :nth-child(1) > .container__lower-airflow__pipe > [style="z-index: 3;"] > [style="margin-top: 55px; visibility: visible;"] > .lw-toggle > div > .switch > input').check({ force: true });
     cy.wait(3000)
     // Container(Rest1-CC1) - Air Valve - Open
     cy.get(':nth-child(1) > .container__item > .container__inner > .container__lower > .container__lets > :nth-child(1) > [style="display: flex; position: relative; margin-top: -71px;"] > :nth-child(2) > .container__lower-airflowTowardsFan__pipe > [style="margin-top: 23px; visibility: visible;"] > .lw-toggle > div > .switch > .slider').click();
     cy.wait(3000)
     // Container(Rest1-CC1) - Air Valve - click to Open
-    cy.get(':nth-child(1) > .container__item > .container__inner > .container__lower > .container__lets > :nth-child(1) > [style="display: flex; position: relative; margin-top: -71px;"] > :nth-child(2) > .container__lower-airflowTowardsFan__pipe > [style="margin-top: 23px; visibility: visible;"] > .lw-toggle > div > .switch > input').check({force: true});
+    cy.get(':nth-child(1) > .container__item > .container__inner > .container__lower > .container__lets > :nth-child(1) > [style="display: flex; position: relative; margin-top: -71px;"] > :nth-child(2) > .container__lower-airflowTowardsFan__pipe > [style="margin-top: 23px; visibility: visible;"] > .lw-toggle > div > .switch > input').check({ force: true });
     cy.wait(3000)
     // PDV(1) - Service Mode Icon - Click
     cy.get(':nth-child(3) > .container__item > .container__inner > .container__upper > .pdv__wrapper > .pdv-name > .lw-switch > .lw-switch__label > img').click();
@@ -340,7 +340,7 @@ describe('Lillby-Service Mode', () => {
     cy.get(':nth-child(3) > .container__item > .container__inner > .container__upper > .pdv__wrapper > .pdv > [style="display: flex;"] > .pdv--img').click();
     cy.wait(3000)
     // PDV(1) - Direction Change - Stright to Side - Click
-    cy.get(':nth-child(3) > .container__item > .container__inner > .container__upper > .pdv__wrapper > .pdv > [style="display: flex;"] > [style="position: relative; text-align: center; color: black; height: 6px; width: 6px; padding-top: 3px; padding-right: 4px;"] > div').click({force: true});
+    cy.get(':nth-child(3) > .container__item > .container__inner > .container__upper > .pdv__wrapper > .pdv > [style="display: flex;"] > [style="position: relative; text-align: center; color: black; height: 6px; width: 6px; padding-top: 3px; padding-right: 4px;"] > div').click({ force: true });
     cy.wait(3000)
     // PDV(2) - Service Mode Icon - Click
     cy.get(':nth-child(2) > .container__item > .container__inner > .container__upper > .pdv__wrapper > .pdv > [style="display: flex;"] > .pdv--img').click();
@@ -355,13 +355,13 @@ describe('Lillby-Service Mode', () => {
     cy.get(':nth-child(2) > .container__item > .container__inner > .container__lower > .compactor > [style="position: relative; display: flex; align-items: center; justify-content: center; margin-top: 6px;"] > .switch-sm-dim > .lw-toggle > div > .switch > .slider > .control-label').click();
     cy.wait(3000)
     // Container(Rest2-CC2) - Compactor Toggele - Click to Start
-    cy.get(':nth-child(2) > .container__item > .container__inner > .container__lower > .compactor > [style="position: relative; display: flex; align-items: center; justify-content: center; margin-top: 6px;"] > .switch-sm-dim > .lw-toggle > div > .switch > input').check({force: true});
+    cy.get(':nth-child(2) > .container__item > .container__inner > .container__lower > .compactor > [style="position: relative; display: flex; align-items: center; justify-content: center; margin-top: 6px;"] > .switch-sm-dim > .lw-toggle > div > .switch > input').check({ force: true });
     cy.wait(3000)
     // Container(Rest2-CC2) - Compactor Toggele - Click to Start-1
     cy.get(':nth-child(2) > .container__item > .container__inner > .container__lower > .compactor > [style="position: relative; display: flex; align-items: center; justify-content: center; margin-top: 6px;"] > .switch-sm-dim > .lw-toggle > div > .switch > .slider > .control-label').click();
     cy.wait(3000)
     // Container(Rest2-CC2) - Compactor Toggele - Click to Start-2
-    cy.get(':nth-child(2) > .container__item > .container__inner > .container__lower > .compactor > [style="position: relative; display: flex; align-items: center; justify-content: center; margin-top: 6px;"] > .switch-sm-dim > .lw-toggle > div > .switch > input').uncheck({force: true});
+    cy.get(':nth-child(2) > .container__item > .container__inner > .container__lower > .compactor > [style="position: relative; display: flex; align-items: center; justify-content: center; margin-top: 6px;"] > .switch-sm-dim > .lw-toggle > div > .switch > input').uncheck({ force: true });
     cy.wait(3000)
     // Container(Papir-CC3) - ServiceMode Icon - Click to back Normal
     cy.get(':nth-child(3) > .container__item > [style="display: flex; position: relative; border-bottom: 3px solid transparent; max-width: 64px;"] > .lw-switch > .lw-switch__label > img').click();

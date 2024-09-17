@@ -1,6 +1,6 @@
 describe('template spec', () => {
   it('InControl', () => {
-   
+
     cy.visit('http://localhost:9000/gui');
     cy.get('[data-testid="overview"] > p').click();
     cy.get('[data-testid="fanGroup"]').click();

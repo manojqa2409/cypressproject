@@ -2,7 +2,7 @@
 
 describe('SearchFeature', () => {
 
-  it('TC-01-Search-Logs-Alarm-AlarmHistory', function() {
+  it('TC-01-Search-Logs-Alarm-AlarmHistory', function () {
 
     cy.visit('http://localhost:8081/gui/');
 
@@ -29,7 +29,7 @@ describe('SearchFeature', () => {
     cy.wait(10000)
     cy.get('.MuiInputAdornment-positionEnd > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root > path').click();
     cy.wait(10000)
-    
+
     // Alarms - Click on Alarm tab
     cy.get('[data-test="alarms"]').click();
     cy.wait(10000)
@@ -60,7 +60,7 @@ describe('SearchFeature', () => {
     // Move FractionSwitch in service mode
     cy.get('.control-view-main__sidebar > :nth-child(1) > [style="display: flex; flex: 1 1 0%; align-items: center;"] > :nth-child(1) > .lw-switch__label > img').click();
     cy.wait(10000)
-    
+
     //Enter string to search data in Alarm
     cy.get('.MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type('120');
     cy.wait(10000)
@@ -115,12 +115,12 @@ describe('SearchFeature', () => {
     cy.get('body').click();
     cy.wait(10000)
     cy.get('#menu- > [aria-hidden="true"]').click();*/
-    
+
     cy.wait(10000)
     cy.get('.control-view__action-primary > [data-test] > .btn > .button__label').click();
     cy.wait(10000)
     cy.get('.lw-header__logout > img').click();
     cy.wait(5000)
-    
+
   });
 })

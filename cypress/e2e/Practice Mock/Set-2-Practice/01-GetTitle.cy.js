@@ -1,20 +1,20 @@
 ///<reference type ="Cypress">
 
-describe('GetTitleTextTest', () =>{
+describe('GetTitleTextTest', () => {
 
-    it('Test the title of Page with Positive',() =>{
+    it('Test the title of Page with Positive', () => {
 
         cy.visit('/')
         cy.title().should('eq', 'Your Store')
-               
+
     })
 
-    it('Test the title of Page with negative',() =>{
+    it('Test the title of Page with negative', () => {
 
-        
+
         cy.visit('/')
         cy.title().should('eq', 'Your Store - Negative')
-               
+
     })
 
 
